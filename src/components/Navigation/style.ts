@@ -19,7 +19,7 @@ export const NavContainer = styled.nav`
     font-size: 2rem;
 
     &:hover {
-      animation: ${JelloHorizontal} ease-in-out 1s;
+      animation: ${JelloHorizontal} linear infinite 2s;
     }
   }
 

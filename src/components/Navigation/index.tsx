@@ -8,7 +8,7 @@ export default function Navigation() {
       <li>
         <ul>
           <NavLink to="/" exact activeClassName="active">
-            Dashboard
+            Random Anime Quote
           </NavLink>
         </ul>
         <ul>
