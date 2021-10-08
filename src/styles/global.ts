@@ -8,7 +8,9 @@ const GlobalStyle = createGlobalStyle`
 
     --light-color: #610094;
     --main-color: #3F0071;
-    --dark-color: #150050;
+    --dark-color: #1C0C5B;
+
+    --main-color-transparent: #3F00715f;
   }
   
   * {
@@ -40,7 +42,8 @@ const GlobalStyle = createGlobalStyle`
   button {
     cursor: pointer;
     border: 0;
-    background-color: var(--light-color);
+    background-color: transparent;
+    border: 3px solid var(--light-color);
     color: var(--yellow-color);
     padding: 0.75rem 1.25rem;
     border-radius: 0.75rem;
@@ -52,6 +55,7 @@ const GlobalStyle = createGlobalStyle`
     &:hover {
       transform: translateY(-5%);
       transform: scale(1.15);
+      background-color: var(--light-color);
     }
   }
 
