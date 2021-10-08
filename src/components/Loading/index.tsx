@@ -1,23 +1,12 @@
-import { useEffect, useState } from 'react'
+import { Dot, LoadingWrapper } from './styles'
 
 export default function Loading() {
-  const [text, setText] = useState<string>('Loading')
-
-  useEffect(() => {
-    const stopper = `${text}...`
-
-    setInterval(() => {
-      text === stopper ? setText(text) : setText(text.concat('.'))
-    }, 200)
-
-    return () => {
-      clearInterval()
-    }
-  }, [text])
-
   return (
-    <>
-      <h3 style={{ fontSize: '2.5rem', textAlign: 'center' }}>{text}</h3>
-    </>
+    <LoadingWrapper>
+      <h3>Loading</h3>
+      <Dot delay="0s" />
+      <Dot delay="0.1s" />
+      <Dot delay="0.2s" />
+    </LoadingWrapper>
   )
 }
