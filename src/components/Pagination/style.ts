@@ -27,6 +27,8 @@ export const NavPagination = styled.nav`
     }
 
     &:hover {
+      background-color: var(--light-color);
+
       &::after {
         width: 50%;
         color: var(--yellow-color);
@@ -34,6 +36,8 @@ export const NavPagination = styled.nav`
     }
 
     &.active {
+      background-color: var(--light-color);
+
       &::after {
         content: '';
         width: 50%;

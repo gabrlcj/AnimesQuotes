@@ -1,26 +1,21 @@
 import styled from 'styled-components'
-import { JelloHorizontal } from '../../styles/animations'
+import { ColorChangeText } from '../../styles/animations'
 
 export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 15rem;
+  gap: 5rem;
 
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.55);
   box-shadow: 0 0 0.75rem 0.25rem rgba(97, 0, 148, 0.37);
-  backdrop-filter: blur(11px);
-  -webkit-backdrop-filter: blur(11px);
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.55);
   color: var(--yellow-color);
   padding: 2rem 0;
 
   h1 {
     font-size: 2rem;
-
-    &:hover {
-      animation: ${JelloHorizontal} linear infinite 2s;
-    }
+    animation: ${ColorChangeText} linear infinite 2.5s;
   }
 
   li {
