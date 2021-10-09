@@ -42,8 +42,6 @@ export const QuoteContainer = styled.div`
   border: 2px solid var(--light-color);
   box-shadow: 0 0 1rem 0.1rem var(--light-color);
   background: var(--main-color-transparent);
-  backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(1rem);
 
   h3 {
     font-size: 1.75rem;
