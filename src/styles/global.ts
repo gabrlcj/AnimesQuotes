@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import AnimeBg from '../assets/animes-bg.jpg'
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -33,6 +34,11 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh; 
     font: 400 1rem 'Permanent Marker', cursive;
     background-color: var(--black-color);
+    background: url('${AnimeBg}') no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    backdrop-filter: brightness(10%) blur(5px);
+    -webkit-backdrop-filter: brightness(10%) blur(5px);
   }
 
   li {
