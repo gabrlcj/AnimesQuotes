@@ -16,6 +16,11 @@ export default function Navigation() {
             Animes availables
           </NavLink>
         </ul>
+        <ul>
+          <NavLink to="/search" activeClassName="active">
+            🔍 Search
+          </NavLink>
+        </ul>
       </li>
     </NavContainer>
   )
