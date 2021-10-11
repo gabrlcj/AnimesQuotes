@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     --main-color: #3F0071;
     --dark-color: #1C0C5B;
 
+    --white-color-transparent: #FEF9EF81;
     --main-color-transparent: #3F00715f;
   }
   
@@ -63,6 +64,10 @@ const GlobalStyle = createGlobalStyle`
       transform: scale(1.15);
       background-color: var(--light-color);
     }
+  }
+
+  input {
+    font: 400 1rem 'Permanent Marker', cursive;
   }
 
   &::-webkit-scrollbar {
