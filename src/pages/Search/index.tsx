@@ -10,26 +10,43 @@ export default function Search() {
   const [loading, setLoading] = useState<boolean>(false)
   const [quotes, setQuotes] = useState<AnimeQuote[]>([])
   const [flag, setFlag] = useState<boolean>(false)
+  const [error, setError] = useState<string>('')
 
   async function searchQuoteHandler() {
-    setLoading(true)
-    const animeTitle = await api.get(`quotes/anime?title=${item}`)
-    setQuotes(animeTitle.data)
-    setLoading(false)
+    try {
+      setLoading(true)
+      const animeTitle = await api.get(`quotes/anime?title=${item}`)
+      setQuotes(animeTitle.data)
+      setLoading(false)
+    } catch (error) {
+      setError('Invalid title name')
+      setLoading(false)
+      setFlag(false)
+    }
   }
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
     searchQuoteHandler()
     setFlag(true)
+    setError('')
   }
 
   return (
     <Container>
       <form className="search-container" onSubmit={handleSubmit}>
         <h1>Search by anime title</h1>
-        {loading === true ? (
-          <Loading />
+        {error ? (
+          <div className="error">
+            <strong>{error}</strong>
+            <input
+              type="search"
+              name="search"
+              placeholder="🔍 Search 'Naruto' for example"
+              value={item}
+              onChange={(e) => setItem(e.target.value)}
+            />
+          </div>
         ) : (
           <input
             type="search"
@@ -41,7 +58,11 @@ export default function Search() {
         )}
         <button type="submit">Search</button>
       </form>
-      <SearchPagination flag={flag} allAnimes={quotes} />
+      {loading === true ? (
+        <Loading />
+      ) : (
+        <SearchPagination flag={flag} allAnimes={quotes} />
+      )}
     </Container>
   )
 }
