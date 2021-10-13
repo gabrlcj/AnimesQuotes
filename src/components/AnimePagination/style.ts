@@ -14,7 +14,6 @@ export const AnimesContainer = styled.section`
   border: 2px solid var(--light-color);
   box-shadow: 0 0 1rem 0.1rem var(--light-color);
   padding: 1rem;
-  overflow-x: auto;
 
   li {
     display: flex;
@@ -35,5 +34,34 @@ export const AnimesContainer = styled.section`
       transform: translateY(-5%);
       transform: scale(1.1);
     }
+  }
+`
+
+export const SearchContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 90%));
+  grid-auto-rows: 220px;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  opacity: 1;
+  border-radius: 0.75rem;
+  background: var(--black-color);
+  border: 2px solid var(--light-color);
+  box-shadow: 0 0 1rem 0.1rem var(--light-color);
+  padding: 1.25rem;
+
+  &.dont-show {
+    display: none;
+    opacity: 0;
+  }
+
+  li {
+    border: 1px solid var(--main-color);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
   }
 `

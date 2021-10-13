@@ -1,25 +1,33 @@
-import { AnimeList } from '../../@types/type'
-import Loading from '../Loading'
-import { AnimesContainer } from './style'
+import { AnimeQuote } from '../../@types/type'
+import { AnimesContainer, SearchContainer } from './style'
 
-interface AnimeListProps {
-  allAnimes: AnimeList[]
-  loading: boolean
+interface AnimePaginationProps {
+  allAnimes: AnimeQuote[]
+  flag?: boolean
 }
 
-export default function AnimePagination({
-  allAnimes,
-  loading,
-}: AnimeListProps) {
-  if (loading) return <Loading />
-
+export default function AnimePagination({ allAnimes }: AnimePaginationProps) {
   return (
     <AnimesContainer>
       {allAnimes.map((anime) => (
         <li key={Math.random()}>
-          <strong>{anime}</strong>
+          <span>{anime}</span>
         </li>
       ))}
     </AnimesContainer>
+  )
+}
+
+export function SearchPagination({ allAnimes, flag }: AnimePaginationProps) {
+  return (
+    <SearchContainer className={flag === false ? 'dont-show' : ''}>
+      {allAnimes.map((anime) => (
+        <li key={Math.random()}>
+          <h3>{anime.anime}</h3>
+          <strong>{anime.character}</strong>
+          <p>{anime.quote}</p>
+        </li>
+      ))}
+    </SearchContainer>
   )
 }
