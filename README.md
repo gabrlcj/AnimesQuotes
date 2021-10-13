@@ -6,9 +6,9 @@ Uma aplicação utilizando uma API de citações de animes, onde podemos gerar u
 
 ## 📸 Imagens
 <div align="center">
-  <img src="src/assets/home.jpg" width=200 />
-  <img src="src/assets/availableAnimes.jpg" width=200 />
-  <img src="src/assets/searchAnimes.jpg" width=200 />
+  <img src="src/assets/home.jpg" width=280 />
+  <img src="src/assets/availableAnimes.jpg" width=280 />
+  <img src="src/assets/searchAnimes.jpg" width=280 />
 </div>
 
 ## 🧰 Tecnologias
