@@ -1,9 +1,6 @@
 export interface AnimeQuote {
-  anime: string
-  character: string
-  quote: string
-}
-
-export interface AnimeList {
-  name: string
+  anime?: string
+  character?: string
+  quote?: string
+  name?: string
 }
