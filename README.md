@@ -1,6 +1,8 @@
 # 🗻 AnimeQuotes
 **Uma aplicação para gerar citações do mundo dos animes.**
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6aed8257-7409-4e0b-9eae-a7b537fc398d/deploy-status)](https://app.netlify.com/sites/worldofanimequotes/deploys)
+
 ## 📝 Sobre
 Uma aplicação utilizando uma API de citações de animes, onde podemos gerar uma citação randômica, verificar quais animes estão disponíveis e também podem pesquisar por algum título especifico e verificar algumas citações de tal anime.
 
