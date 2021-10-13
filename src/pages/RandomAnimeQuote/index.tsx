@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimeQuote } from '../../@types/type'
+import Footer from '../../components/Footer'
 import Loading from '../../components/Loading'
 import api from '../../service/api'
 
@@ -40,6 +41,7 @@ export default function Dashboard() {
           </>
         )}
       </QuoteContainer>
+      <Footer />
     </Container>
   )
 }
