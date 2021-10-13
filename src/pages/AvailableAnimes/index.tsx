@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { AnimeList } from '../../@types/type'
+import { AnimeQuote } from '../../@types/type'
 import AnimePagination from '../../components/AnimePagination'
 import Loading from '../../components/Loading'
 import Pagination from '../../components/Pagination'
@@ -7,7 +7,7 @@ import api from '../../service/api'
 import { Container } from './style'
 
 export default function AvailableAnimes() {
-  const [allAnimes, setAllAnimes] = useState<AnimeList[]>([])
+  const [allAnimes, setAllAnimes] = useState<AnimeQuote[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [currentPage, setCurrentPage] = useState<number>(1)
   const [postPerPage] = useState<number>(50)
@@ -44,7 +44,7 @@ export default function AvailableAnimes() {
             paginate={paginate}
             currentPage={currentPage}
           />
-          <AnimePagination allAnimes={currentPosts} loading={loading} />
+          <AnimePagination allAnimes={currentPosts} />
         </>
       )}
     </Container>
