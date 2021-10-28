@@ -1,4 +1,4 @@
-# 🗻 AnimeQuotes
+# AnimeQuotes
 **Uma aplicação para gerar citações do mundo dos animes.**
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6aed8257-7409-4e0b-9eae-a7b537fc398d/deploy-status)](https://app.netlify.com/sites/worldofanimequotes/deploys)
